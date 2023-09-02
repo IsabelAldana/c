@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<script type='text/javascript'>
+
+    (function()
+    {
+      if( window.localStorage )
+      {
+        if( !localStorage.getItem('firstLoad') )
+        {
+          localStorage['firstLoad'] = true;
+          window.location.reload();
+        }  
+        else
+          localStorage.removeItem('firstLoad');
+      }
+    })();
+    
+    </script>
+<footer>
+    <div class = "newsletter">
+
+            <div class = "titulonewsletter">Suscribete a nuestro email</div>
+            <input class="datos_newsletter" title= "tu nombre" type="text" id="nombre" name="nombre" placeholder="Nombre..." required>
+            <input class="datos_newsletter" title= "tu email" type="email" id="email" name="email" placeholder="Email..." required>
+            <input class ="botonacceder" type="submit" value="ENVIAR">
+
+</div>
+    <div class = "fondo">
+    <div class = "cajasfooter">
+        <section>
+        <h4 class = "titulosfooter">Información sobre tu pedido</h4>
+        <p class ="recibitucompra">Tienes dos opciones por ser usuario registado: Recibe tu compra en tu domicilio si compras antes de las 13:00 de manera GRATIS o retirala en nuestro local la proxima semana con un costo adiconal de 0,15 USD</p>
+        <ul><p class ="titulomenu">MENÚ</p>
+            <li>Inicio</li>
+            <li>Tienda</li>
+            <li>Quienes somos</li>
+            <li>FAQ</li>
+            <li>Politica de Privacidad</li>
+        </ul>
+        </section>
+        <section>
+        <h4 class = "titulosfooter">Quienes somos</h4>
+        <img src="/img/datafiscal.jfif" aling = "right" alt="afip" class="logoafip"/>
+        <p>Somos una empresa dedicada al entretenimiento desde casa funcionando a partir del año 2015.</p>
+        </section>
+        <section>
+            <h4 class = "titulosfooter">Contáctanos</h4>
+            <div class="cajacontacto">
+            <div class="textocontacto">               
+                <p><c>Email:</c><a href="mailto:ventas@mundoplay.com">ventas@mundoplay.com</a></p>
+                <p><c>Telefono:</c><d>(+601) 555 -33-21-10</d></p>
+                <p><c>Whataspp:</c><d>+57 32000-2003-2039020</d></p>
+                <p><c>Horario de Atención:</c><d>Lunes a Viernes de 10hrs a 20hrs. Sabados de 8 a 13hrs</d></p>
+                <p><c>Reclamos:</c><a href="mailto:serviciotecnico@mundoplay.com">serviciotecnico@mundoplay.com</a></p>
+            </div>
+            <div class="cajalogos">
+                <img src="/img/facebook-logo.svg"  alt="Facebook" class ="logosredes"/>
+                <img src="/img/instagram-logo.svg" alt="Instagram" class ="logosredes" />
+                <img src="/img/whatsapp-logo.svg"  alt="Whatsapp" class ="logosredes"/>
+            </div>
+            </div>
+        </section>
+    </div>
+    <h5>Copyright © 2023 MUNDO PLAY S.A.</h5>   
+</div>
+</footer> 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<!-- COMIENZO DEL HEAD -->
+
+<%- include ("../partials/head") -%>
+
+<body>
+    <div class ="logowhatsapp">
+        <img src="/img/whatsapp-logo.svg"  alt="Whatsapp" class ="logosredes"/>
+    </div>
+
+<!-- COMIENZO HEADER -->
+<%- include ("../partials/header") -%>
+
+        <main>
+            <div>
+            <div class = "fotosyprecio_detalle">
+            <div class = "fotos_detalle_producto">
+                <div class = "foto_detalle_producto_principal">
+                    <img class="principal" src="/img/products/<%=product.image%>">
+                </div>
+                <div class = "foto_detalle_producto_secundarias">
+                    <img class="secundaria" src="/img/products/<%=image.image2%>">
+                    <img class="secundaria" src="/img/products/<%=image.image3%>">
+                    <img class="secundaria" src="/img/products/<%=image.image4%>">
+                </div>
+            </div>  
+            <section class ="cajaprecio_detalle">
+                <div class ="titulo_detalle_producto">
+                    <%=product.marca%> <%=product.serie%> <%=product.modelo%> | <%=product.memoria%> | 
+                    <%=product.almacenamiento%> | <%=product.sistemaOperativo%> | <%=product.pantalla%>" 
+                </div>
+                <div class = "codigo_detalle_producto">
+                    Cod.  <%=product.codigomodelo%>
+                </div>
+                <div class = "<%= cssStock %>">
+                    <%= hayStock %>
+                </div>
+                <div class = "precio">
+                    Precio: ARS <%=toThousand(product.precio)%>
+                </div>
+                <div class = "botones_detalle">
+                    <button class = "boton">Comprar Ahora</button>
+                    <button class = "boton">Agregar al carrito</button>
+                    <a href = "/products/<%=product.id%>/editImage"><button class = "boton">Editar Imagenes</button></a>
+                    <a href = "/products/<%=product.id%>/edit"><button class = "boton">Editar Producto</button></a>
+                    <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                        <button type="submit" class = "boton">Eliminar</button>
+                    </form>
+                </div>
+            <section class = "marcas">
+                    <img class="logomarcas" src="/img/Alienware-Logo-1.png">
+                    <img class="logomarcas" src="/img/radeonlogo.jfif">
+                    <img class="logomarcas" src="/img/windows11logo.png">
+            </section>
+            </div>
+            </div>
+        </main>
+
+    <!-- COMIENZO FOOTER -->
+
+    <%- include ("../partials/footer") -%>
+
+    </body>
+</html>

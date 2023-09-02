@@ -1,0 +1,68 @@
+[
+ {
+  "id": 2,
+  "name": "Miguel",
+  "last_name": "Badboy",
+  "email": "miguelbadboyinc@gmail.com",
+  "password": "thebestbaby",
+  "phone": "573112345676",
+  "country": "Colombia",
+  "category": "Administrador",
+  "image": "1657040016722.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Ricky",
+  "last_name": "NoMorty",
+  "email": "Rickynomorty@hotmail.com",
+  "password": "cienciasiempre",
+  "phone": "234566443",
+  "country": "EEUU",
+  "category": "Administrador",
+  "image": "1657040131676.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Gustavo",
+  "last_name": "Rodriguez",
+  "email": "GusRod@gmail.com",
+  "password": "gusgusgus",
+  "phone": "34432212231",
+  "country": "Peru",
+  "category": "Administrador",
+  "image": "1656943552581.png"
+ },
+ {
+  "id": 6,
+  "name": "Panas",
+  "last_name": "Landia",
+  "email": "panaslandia@yahoo.com",
+  "password": "losparceros",
+  "phone": "123222333",
+  "country": "Colombia",
+  "category": "Usuario",
+  "image": "1657040405141.jpeg"
+ },
+ {
+  "id": 7,
+  "name": "Norberto",
+  "last_name": "Perales",
+  "email": "norbertosinperas@gmail.com",
+  "password": "odiolasperasfrutales",
+  "phone": "5491122604195",
+  "country": "Argentina",
+  "category": "Administrador",
+  "image": "1657395831244.jpeg"
+ },
+ {
+  "id": 8,
+  "name": "Lucas",
+  "last_name": "Montoby",
+  "email": "lucasmonto@utn.edu.com",
+  "password": "0101010101010101",
+  "phone": "100100100100",
+  "country": "Argentina",
+  "category": "Administrador",
+  "image": "1657406279748.jpeg"
+ }
+]

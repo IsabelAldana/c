@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html>
+    
+<!-- COMIENZO DEL HEAD -->
+
+<%- include ("../partials/head") -%>
+    <body>
+        <div class ="logowhatsapp">
+            <img src="/img/whatsapp-logo.svg"  alt="Whatsapp" class ="logosredes"/>
+        </div>
+
+<!-- COMIENZO BODY -->
+
+<%- include ("../partials/header") -%>
+
+    <div class="flexDeskL">
+        <article class="bordeLogin2">
+                <h1>¿No tienes cuenta?</h1> 
+                <p><a href="/register">¡Regístrate!</a></p>
+        </article>
+        
+        <main class="ajusteWidth">
+        <article class="bordeLogin1">
+            <h1>Inicia sesión</h1>
+            <form action="/users/login" method="POST">
+                <div class="formulario">
+                    <div class="centrado">
+                        <p class="bordesAbajoL">
+                            <label  for="email">Email:</label>
+                        </p>
+                        <input class="bordesArriba" type="text" id="email" name="email">
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="text-error">
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
+                        <br>
+                        <p class="bordesAbajoL">
+                            <label for="password">Contraseña:</label>
+                        </p>
+                        <input  class="bordesArriba" type="password" id="password" name="password">
+                        <br>
+                        <br>
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
+                        </label>
+                    <div class ="cajabotones">
+                        <input class="boton" type="submit" value="Acceder">
+                </div>
+            </form>
+
+            <br>
+            <br>
+
+            <article class="links">
+                <p class="borde"><a class="noShow" href="#">Crea tu cuenta</a></p>
+                <p class="borde"><a href="#">¿Olvidaste tu contraseña?</a></p>
+            </article>
+        </article>
+        </main>
+    </div>
+    
+    <!-- COMIENZO FOOTER -->
+    <%- include ("../partials/footer") -%>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<!-- COMIENZO DEL HEAD -->
+
+<%- include ("../partials/head") -%>
+
+    <body>
+        <div class ="logowhatsapp">
+            <img src="/img/whatsapp-logo.svg"  alt="Whatsapp" class ="logosredes"/>
+        </div>
+
+        
+<!-- COMIENZO BODY -->
+<%- include ("../partials/header") -%>
+
+<div class = "cajacelesteregistro"></div>
+<div class = "tituloregistro">
+<h2>Completa tus datos</h2>
+</div>
+<form class = "listadoregistro" action="/users/register" method="POST" enctype="multipart/form-data">
+        <div class = "cajaregistro">
+        <div class = "camposregistro">
+            <label for="name">Nombre</label><br>
+            <input class="ingresodato" type="text" id="name" name="name" required>
+         </div>        
+        <div class = "camposregistro">
+            <label for="last_name">Apellido</label><br>
+            <input class="ingresodato"  type="text" id="last_name" name="last_name" required>
+        </div> 
+        <div class = "camposregistro">
+            <label for="email">Email</label><br>
+            <input class="ingresodato" type="email" id="email" name="email" required>
+        </div>
+        <div class = "camposregistro">
+            <label for="password">Password</label><br>
+            <input class="ingresodato" type="password" id="password" name="password">
+        </div>
+        <div class = "camposregistro">
+            <label for="phone">Telefono</label>
+            <input class="ingresodato" type="text" id="phone" name="phone" required>
+         </div>
+         <div class = "camposregistro">
+            <label for="country">Pais</label>
+            <input class="ingresodato" type="text" id="country" name="country" required>
+         </div>
+        <div  class = "camposregistro" style ="display:flex; flex-direction:column">
+            <label style="margin-bottom:7px" for="category">Categoria</label>
+            <p><input type="radio" value="Administrador" name ="category">Administrador</p>
+            <p><input type="radio" value="Usuario" name ="category">Usuario</p>
+        </div> 
+        <div class = "camposregistro">
+            <input type="button" onclick= "document.getElementById('imageInput').click()" value="Agregar foto de Perfil" class ="botonEditImage" />
+            <input type="file" id="imageInput" name = "image"/>
+        </div> 
+    </div>
+       <div class ="cajabotones">
+            <div>
+                <button type="submit" class="boton">Guardar</button>
+            </div> 
+            <div>
+                <a href = "/users/list"><button class = "boton">Regresar</button></a>
+            </div>
+            </div> 
+                   
+</form>
+
+
+       
+                    <article class="links">
+                        <p class="borde"><a href="#">Regresar</a></p>
+                    </article>
+                </article>
+
+
+                </main>
+            </div>
+            
+<%- include ("../partials/footer") -%>
+
+    </body>
+</html>

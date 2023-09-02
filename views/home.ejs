@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<!-- COMIENZO DEL HEAD -->
+
+<%- include ("./partials/head") -%>
+
+<!-- COMIENZO BODY -->
+<body>
+        <div class ="logowhatsapp">
+            <img src="/img/whatsapp-logo.svg"  alt="Whatsapp" class ="logosredes"/>
+        </div>
+
+<%- include ("./partials/header") -%>
+
+        <main>
+            <div class="swiffy-slider">
+                <article class="sliderCenter">
+                    <ul class="slider-container">
+                        <% inSaleProducts.forEach(function (product) { %>
+                        <li><a href = "/products/<%=product.id%>"><img src="/img/carrousel/<%=product.imagenBanner%>" style="max-width: 100%;height: auto"/></a></li>
+                        <% }) %>
+                    </ul>
+                
+                    <button type="button" class="slider-nav"></button>
+                    <button type="button" class="slider-nav slider-nav-next"></button>
+                
+                    <div class="slider-indicators">
+                        <button class="active"></button>
+                        <button></button>
+                        <button></button>
+                    </div>
+                </article>
+            </div>
+
+        <section class="Barracuotassininteres">
+            <p><h3 class="Cuotas">¡Ten hasta un 30% de descuento si te registras hoy!</h3></p>
+        </section>
+
+        <section class="Productosmasvendidos">
+            <p><h3 class="Productos">Abajo estan los productos que más se vendieron esta semana</h3></p>
+        </section>
+        
+        <section>
+            <div class="Imagenesmasvendidos">
+                
+                <% topCincoVendidos.forEach(function (product) { %>
+               <div class="masVendidosFlex"> 
+                    <a href = "/products/<%=product.id%>">
+                    <img class="imagenMV" src="/img/products/<%=product.image%>">
+                    <ul class="Lista">
+                        <div class="Marca"><%=product.marca%> <%=product.modelo%></div>
+                        <div class="precio">$ <%=toThousand(product.precio)%></div>
+                        <div class="descuento">20% off</div>
+                        <div class="camion"><div i class="fas fa-truck"></i></div></div>
+                    </ul>
+                    </a>
+                </div> 
+                <% }) %> 
+            </div>
+        </section>
+    </main>
+
+    <!-- COMIENZO FOOTER -->
+
+    <%- include ("./partials/footer") -%>
+
+    </body>
+</html>
+
